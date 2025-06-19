@@ -16,3 +16,6 @@ a=int(input ("dame un numero al azar "))
 b= int (input("dame otro numero al azar "))
 
 print ("la respuesta de la suma es",(a+b))
+
+
+#type es para saber que tipo es ( en este caso a es de tipo int )

@@ -1,4 +1,5 @@
 playstation = 3200000
+#ponemos los datos en numeros fraccionarios
 marzo =0.8
 tioRico = 0.2
 hugo = 0.5
