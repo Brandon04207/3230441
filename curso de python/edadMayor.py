@@ -1,14 +1,14 @@
-"""
-edad= int(input("dijite su edad:"))
+
+edad= int(input("digite su edad:_"))
 if edad>= 18:
     print ("eres mayor de edad")
 else:
     print ("eres menor de edad")
-"""
+
 
 """
-A=int (input("dijite primer numero:_"))
-B=int (input("dijite segundo numero:_"))
+A=int (input("digite primer numero:_"))
+B=int (input("digite segundo numero:_"))
 
 if A < B:
     print (A,"es menor a ", B)
@@ -32,9 +32,11 @@ if altura>= 1.80:
 else:
     print ("usted es bajo")
 """
+"""
 nombre = (input("ingrese su nombre:_")).lower()
 if nombre==  "juan" :
     print("es el ganador")
 else:
     print ("no gano")
 #.lower(pone todo en minuscula), upper(pone todo en mayuscula), title(pone la primera en mayuscula)
+"""

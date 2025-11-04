@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nomina", "nomina\nomina.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "shared", "shared\shared.csproj", "{51C89F21-6ECB-4C33-9931-D9F95BF52883}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "taller", "taller\taller.csproj", "{2453BA90-9F33-438D-A76F-F5C51AD3D979}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{51C89F21-6ECB-4C33-9931-D9F95BF52883}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{51C89F21-6ECB-4C33-9931-D9F95BF52883}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{51C89F21-6ECB-4C33-9931-D9F95BF52883}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2453BA90-9F33-438D-A76F-F5C51AD3D979}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2453BA90-9F33-438D-A76F-F5C51AD3D979}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2453BA90-9F33-438D-A76F-F5C51AD3D979}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2453BA90-9F33-438D-A76F-F5C51AD3D979}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

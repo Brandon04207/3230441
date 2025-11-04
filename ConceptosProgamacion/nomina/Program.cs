@@ -24,5 +24,3 @@ var recargoDom= utilidades.calcularRecargoDominical(HDom, smlv);
 var recargoNoc = utilidades.calcularRecargoNoc(HNoc, smlv);
 
 utilidades.calcularNomina(nombre, smlv, HDom, HNoc, HD, HFest);
-
-
