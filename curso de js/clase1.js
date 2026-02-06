@@ -2,6 +2,7 @@
 /* Brandon Alejandro Diaz Arango - 18 años de edad */
 /* estudiante sena - analisis y desarrollo de sofware*/
 /* de Bello antioquia, brandon04207@gmail.com*/
+/*------------------------------------------*/
 
 //imprimir en pantalla/consola
 console.log ("pecho y espalda")
@@ -111,3 +112,5 @@ console.log (frase.length)//TAMAÑO
 console.log (frase.toLowerCase()) //minuscula
 console.log (frase.toUpperCase())//mayuscula
 consele.log (frase.substring(42, 52))
+
+

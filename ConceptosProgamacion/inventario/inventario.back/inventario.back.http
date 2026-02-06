@@ -1,0 +1,6 @@
+@inventario.back_HostAddress = http://localhost:5261
+
+GET {{inventario.back_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
