@@ -112,5 +112,3 @@ console.log (frase.length)//TAMAÑO
 console.log (frase.toLowerCase()) //minuscula
 console.log (frase.toUpperCase())//mayuscula
 consele.log (frase.substring(42, 52))
-
-

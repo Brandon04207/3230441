@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<!--------* Nos indica el lenguaje  -->
+<html lang="en">
+<head>
+    <!-- * la etiqueta meta charset nos permite definir UTF-8  porque 
+     soporta distintis idiomas, emojis, caracteres especiales -->
+    <meta charset="UTF-8">
+
+    <!-- * esta etiqueta controla como se muestra la pagina en dispositivos moviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- * nombre de la pestaña -->
+    <title>Document</title>
+</head>
+<body>
+    <!--! parrafos-->
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo eaque aperiam illo? Esse aspernatur eos, deserunt expedita
+     cum numquam facere inventore illo repudiandae vitae consequatur voluptatem. Tenetur impedit quos eveniet!</p>
+
+     <!--! encabezados -->
+     <h1>Encabezado 1</h1>
+     <h2>Encabezado 2</h2>
+     <h3>Encabezado 3</h3>
+
+        <!--! negritas -->
+       <!-- strong resalta el contenido, ademas el buscador lo interpreta como 
+        importate o relevate -->
+    <p> hola <strong>como</strong> estas?</p>
+    <p> hola <b>como</b> estas?</p>
+    
+        <!--! cursiva -->
+        <!-- em resalta el contenido, ademas el buscador lo interpreta como 
+        importate o relevate -->    
+    <p>hola <em>como</em> estas?</p>
+    <p>hola <i>como</i> estas?</p>
+
+    <!--! listas  -->
+
+    <!-- ul es una lista desordenada, ol es una lista ordenada -->
+    <ul>
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+    </ul>
+
+    <!-- ol tiene un atributo llamado type que nos permite cambiar el tipo de numeracion -->
+    <ol type="i">
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <ul>
+            <li>Subelemento 1</li>
+            <li>Subelemento 2</li>
+        </ul>
+    </ol>
+    
+    <!--! etiquetas de definición -->
+    <dl>
+        <dt>aves</dt>
+        <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate fugiat saepe 
+            explicabo asperiores deleniti iure blanditiis? 
+            Consequatur dignissimos est sequi doloremque, ad perferendis vero repellendus s
+            apiente cumque quis itaque consequuntur?</dd>
+        
+        <dt>mamiferos</dt>
+        <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate fugiat saepe 
+            explicabo asperiores deleniti iure blanditiis? 
+            Consequatur dignissimos est sequi doloremque, ad perferendis vero repellendus s
+            apiente cumque quis itaque consequuntur?</dd>
+    </dl>
+
+    <!--! hipervinculos-->
+    <!-- a es la etiqueta de anclaje, el atributo href nos permite definir la direccion del enlace -->
+     <!--target="_blank" abre el enlace en una nueva pestaña-->
+    <a href = "https://www.google.com" target="_blank">Google</a>
+
+    <!--! anclas -->
+    <!-- atributo que nos lleva a una sección específica de la página -->
+    <h1>animales</h1>
+    <ul>
+        <li ><a href="#terrestres">terrestres</a></li>
+        <!-- href es el atributo que nos permite definir la dirección del enlace -->
+        <!-- # es el identificador de la sección -->
+        <li><a href="#acuaticos">acuáticos</a></li>
+        <li><a href="#aereos">aereos</a></li>
+    </ul>
+
+    <a id="terrestres"></a>
+    <!-- id es el atributo que nos permite definir un identificador unico para un elemento -->
+    <a id="acuaticos"></a>
+    <a id="aereos"></a>
+
+    <h2>terrestres</h2>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda provident aspernatur 
+        fuga consequatur expedita voluptas quam repellendus tempore maiores, 
+        possimus inventore nisi eius odit asperiores nulla tenetur? Quae, doloremque fugit.</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda provident aspernatur 
+        fuga consequatur expedita voluptas quam repellendus tempore maiores, 
+        possimus inventore nisi eius odit asperiores nulla tenetur? Quae, doloremque fugit.</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda provident aspernatur 
+        fuga consequatur expedita voluptas quam repellendus tempore maiores, 
+        possimus inventore nisi eius odit asperiores nulla tenetur? Quae, doloremque fugit.</p>
+    
+    <h2>acuáticos</h2>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda provident aspernatur 
+        fuga consequatur expedita voluptas quam repellendus tempore maiores, 
+        possimus inventore nisi eius odit asperiores nulla tenetur? Quae, doloremque fugit.</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda provident aspernatur 
+        fuga consequatur expedita voluptas quam repellendus tempore maiores, 
+        possimus inventore nisi eius odit asperiores nulla tenetur? Quae, doloremque fugit.</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda provident aspernatur 
+        fuga consequatur expedita voluptas quam repellendus tempore maiores, 
+        possimus inventore nisi eius odit asperiores nulla tenetur? Quae, doloremque fugit.</p>
+
+    <h2>aereos</h2>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda provident aspernatur 
+        fuga consequatur expedita voluptas quam repellendus tempore maiores, 
+        possimus inventore nisi eius odit asperiores nulla tenetur? Quae, doloremque fugit.</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda provident aspernatur 
+        fuga consequatur expedita voluptas quam repellendus tempore maiores, 
+        possimus inventore nisi eius odit asperiores nulla tenetur? Quae, doloremque fugit.</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda provident aspernatur 
+        fuga consequatur expedita voluptas quam repellendus tempore maiores, 
+        possimus inventore nisi eius odit asperiores nulla tenetur? Quae, doloremque fugit.</p>
+
+    <!--! IMAGENES -->
+
+    <img alt="lego" title="lego" src="imagenes/imagen1.png" width="200">
+    <!-- src es el atributo que nos permite definir la ruta de la imagen -->
+    <!-- alt es el atributo que nos permite definir un texto alternativo para la imagen -->
+    <!-- title es el atributo que nos permite definir un texto que se muestra al pasar el mouse sobre la imagen -->
+    <!-- width y height son los atributos que nos permiten definir el tamaño de la imagen -->
+
+    <!--! DIVISIONES -->
+
+    <div id="todo">
+        <div id="contenido">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Animi reiciendis eveniet debitis qui optio iusto ab molestias ipsum asperiores perferendis,
+            corrupti excepturi corporis ipsam aliquid unde aut labore et facere.</p>
+        </div>
+        <div id="general">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Animi reiciendis eveniet debitis qui optio iusto ab molestias ipsum asperiores perferendis,
+            corrupti excepturi corporis ipsam aliquid unde aut labore et facere.</p>
+        </div>
+        <p class="fresa">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Animi reiciendis eveniet debitis qui optio iusto ab molestias ipsum asperiores perferendis,
+            corrupti excepturi corporis ipsam aliquid unde aut labore et facere.</p>
+
+        <a href="https://www.google.com" target="_blank">Google</a>
+        <a href="https://www.google.com" target="_blank">Google</a>
+        <a href="https://www.google.com" target="_blank">Google</a>
+        <a href="https://www.google.com" target="_blank">Google</a>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Animi reiciendis eveniet debitis qui optio iusto ab molestias ipsum asperiores perferendis,
+            corrupti excepturi corporis ipsam aliquid unde aut labore et facere.</p>
+
+    </div>
+
+    <!--TODO conectando el HTML al CSS-->
+    <link rel="stylesheet" href="style.css">
+
+</body>
+</html>

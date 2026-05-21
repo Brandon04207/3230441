@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Feliz Cumpleaños, Mamá!</title>
+    <!-- Tipografías elegantes desde Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Monsieur+La+Doulaise&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --oro-rosa: #e5b3ae;
+            --oro-oscuro: #b8860b;
+            --champan: #fdf8f5;
+            --texto: #4a3e3d;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--champan);
+            color: var(--texto);
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+            perspective: 1000px;
+        }
+
+        /* Fondo sutil con pétalos flotando */
+        .background-decor {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+            background: radial-gradient(circle at 50% 50%, rgba(253,248,245,1) 0%, rgba(245,225,218,1) 100%);
+        }
+
+        /* Contenedor de la carta interactiva */
+        .envelope-wrapper {
+            position: relative;
+            width: 380px;
+            height: 280px;
+            background-color: #f7ded8;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            cursor: pointer;
+            z-index: 10;
+            transition: transform 0.5s ease;
+        }
+
+        .envelope-wrapper:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Solapa del sobre */
+        .envelope-wrapper::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-left: 190px solid transparent;
+            border-right: 190px solid transparent;
+            border-top: 150px solid #eecbc4;
+            transform-origin: top;
+            transition: transform 0.4s ease 0.2s, z-index 0.2s ease 0.2s;
+            z-index: 5;
+        }
+
+        /* Laterales del sobre */
+        .envelope-wrapper::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-left: 190px solid #f2cfc7;
+            border-right: 190px solid #f2cfc7;
+            border-bottom: 140px solid #ecd0c9;
+            border-top: 140px solid transparent;
+            border-radius: 0 0 8px 8px;
+            z-index: 4;
+        }
+
+        /* Sello de cera digital */
+        .stamp {
+            position: absolute;
+            top: 130px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50px;
+            height: 50px;
+            background-color: #c98a83;
+            border-radius: 50%;
+            z-index: 6;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.3s ease;
+        }
+
+        .stamp::after {
+            content: "♥";
+            color: #fff;
+            font-size: 20px;
+        }
+
+        /* La carta que sale de adentro */
+        .letter {
+            position: absolute;
+            top: 10px;
+            left: 15px;
+            width: 350px;
+            height: 250px;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 4px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), height 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 3;
+            overflow: hidden;
+        }
+
+        /* Estado abierto por JavaScript */
+        .envelope-wrapper.open::before {
+            transform: rotateX(180deg);
+            z-index: 1;
+        }
+
+        .envelope-wrapper.open .stamp {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .envelope-wrapper.open .letter {
+            transform: translateY(-280px);
+            height: 520px;
+            z-index: 12;
+            box-shadow: 0 20px 50px rgba(74, 62, 61, 0.15);
+            overflow-y: auto;
+        }
+
+        /* Contenido del mensaje */
+        .letter-content {
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.4s ease 0.4s;
+        }
+
+        .envelope-wrapper.open .letter-content {
+            opacity: 1;
+        }
+
+        h1 {
+            font-family: 'Monsieur La Doulaise', cursive;
+            font-size: 55px;
+            color: #b3736b;
+            margin-bottom: 10px;
+            font-weight: 400;
+        }
+
+        .subtitle {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 14px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #9c8481;
+            margin-bottom: 30px;
+        }
+
+        .message-body {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 19px;
+            line-height: 1.6;
+            color: var(--texto);
+            text-align: justify;
+            margin-bottom: 25px;
+            font-style: italic;
+        }
+
+        .signature {
+            font-family: 'Monsieur La Doulaise', cursive;
+            font-size: 40px;
+            color: #b3736b;
+            margin-top: 15px;
+        }
+
+        /* Instrucción sutil abajo */
+        .instruction {
+            position: absolute;
+            bottom: -50px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #a89390;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 0.5; }
+            50% { opacity: 1; }
+            100% { opacity: 0.5; }
+        }
+
+        /* Estilo para la barra de desplazamiento interna de la carta si es necesario */
+        .letter::-webkit-scrollbar {
+            width: 4px;
+        }
+        .letter::-webkit-scrollbar-thumb {
+            background-color: var(--oro-rosa);
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="background-decor"></div>
+
+    <!-- Sobre Interactivo -->
+    <div class="envelope-wrapper" id="envelope" onclick="toggleEnvelope()">
+        <div class="stamp"></div>
+        
+        <!-- Tarjeta interna -->
+        <div class="letter">
+            <div class="letter-content">
+                <h1>Feliz Cumpleaños</h1>
+                <div class="subtitle">Para la Reina de la Casa</div>
+                
+                <div class="message-body">
+                    <p>Mi madre hermosa,</p>
+                    <br>
+                    <p>Hoy celebramos no solo un año más de tu vida, sino la bendición tan enorme que es tenerte con nosotros. Gracias por ser mi refugio incondicional, por tus abrazos que sanan todo y por enseñarme el verdadero significado del amor puro y la fortaleza.</p>
+                    <br>
+                    <p>Mereces un universo lleno de salud, risas y momentos felices. Espero que este día refleje al menos un poquito de la luz y la alegría que tú le regalas al mundo todos los días.</p>
+                    <br>
+                    <p>Te amo con todo mi corazón.</p>
+                </div>
+                
+                <div class="signature">Tu hijo </div>
+            </div>
+        </div>
+
+        <div class="instruction" id="instruction-text">Haz clic para abrir</div>
+    </div>
+
+    <script>
+        function toggleEnvelope() {
+            const envelope = document.getElementById('envelope');
+            const instruction = document.getElementById('instruction-text');
+            
+            envelope.classList.toggle('open');
+            
+            if(envelope.classList.contains('open')) {
+                instruction.style.opacity = '0';
+            } else {
+                setTimeout(() => {
+                    instruction.style.opacity = '1';
+                }, 400);
+            }
+        }
+    </script>
+</body>
+</html>

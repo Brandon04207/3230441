@@ -1,0 +1,59 @@
+/* podemos modificar el estilo llamando directamente las etiquetas */
+body{
+    width: 70%; /* el ancho del body se reduce al 70% */
+    margin: 0 auto; /* centramos el body, */
+}
+
+/* podemos modificar el estilo llamando directamente las etiquetas */
+#contenido{
+    background-color: #0c17b7; /* color de fondo del contenido */
+    border : 2px solid #000000; /* borde del contenido */
+    padding: 20px; /* espacio interno del contenido */
+    border-radius: 10px; /* bordes redondeados */
+}
+
+#general{
+    background-color: #a3ff6a; /* color de fondo del general */
+    border : 2px solid #000000; /* borde del general */
+    padding: 20px; /* espacio interno del general */
+    border-radius: 10px; /* bordes redondeados */
+}
+
+#todo a{
+    background-color: #ffffff; /* color de fondo del enlace */
+    color : #000000; /* color de la letra del enlace */
+}
+
+#todo{
+    background-color: #ff6a6a; /* color de fondo del todo */
+    border : 2px solid #000000; /* borde del todo */
+    padding: 20px; /* espacio interno del todo */
+    border-radius: 10px; /* bordes redondeados */
+}
+
+/*! MODIFICAR LETRAS */
+
+h1{
+    font-family: 'Curlz MT', cursive; /* tipo de letra del h1 */
+    font-size: 3em;
+    text-align: center;
+}
+
+p{
+    line-height: 1.5rem; /* espacio entre líneas */
+    text-indent: 4rem; /* sangría de la primera línea */
+    padding: 10px; /* espacio interno de los párrafos */
+    text-align: justify; /* justificación del texto */
+    text-transform: lowercase; /* transformar el texto a minúsculas */
+    /* text-transform: uppercase; transformar el texto a mayúsculas  */
+    /* text-transform: capitalize; transformar la primera letra de cada palabra a mayúscula */
+}
+
+/*podemos modificar por clases*/
+
+.fresa{
+    color: #630101; /* color de la letra */
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* tipo de letra */
+    font-size: 1.5em; /* tamaño de la letra */
+}
+

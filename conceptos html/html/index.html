@@ -1,0 +1,38 @@
+<html lang="en"><!-- html lang es para indicar el idioma del documento, en este caso inglés -->
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+    <title>Document</title>
+</head>
+<body>
+    <div>    
+        <input type="text" id="num1" > <!-- input es para crear un campo de entrada, 
+        type="text" indica que es un campo de texto, id="num1" es para identificar el campo -->
+    </div>
+    <div>
+        <input type="text" id="num2" > <!-- input es para crear un campo de entrada, 
+        type="text" indica que es un campo de texto, id="num2" es para identificar el campo -->
+    </div>
+    <div>    
+        <input type="text" id="resultado" > <!-- input es para crear un campo de entrada, 
+        type="text" indica que es un campo de texto, id="resultado" es para identificar el campo -->
+    </div>
+    <div>
+        <button onclick="sumar()" ><!-- button es para crear un botón, 
+            onclick="sumar()" es para indicar que al hacer clic en el botón se ejecutará la función sumar() -->
+        <strong>+</strong></button>
+
+        <button onclick="restar()">
+        <strong>-</strong></button>
+
+        <button onclick="multiplicar()">
+        <strong>*</strong></button>
+
+        <button onclick="dividir()">
+        <strong>/</strong></button>
+    </div>
+    <script src="app.js"></script><!-- script es para incluir un archivo JavaScript, src="app.js" indica la ruta del archivo -->
+
+</body>
+</html>
